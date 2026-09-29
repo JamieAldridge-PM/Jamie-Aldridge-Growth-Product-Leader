@@ -1,0 +1,28 @@
+kind = "web"
+previewPath = "/"
+title = "Jamie Aldridge - Growth Product Leader"
+description = "A client-facing personal portfolio site for Jamie Aldridge, a growth product leader specializing in subscription monetization, paywalls, pricing, and payments. Four sections: Home (positioning + proof), Case Studies (in-depth write-ups with a consistent template), Lab (side projects and AI-fluency demos), and About/Resume (bio, operating principles, resume, contact/booking). Built to convince hiring managers and recruiters quickly, with a data-forward, dashboard-like feel."
+version = "1.0.0"
+id = "artifacts/jamie-aldridge"
+router = "path"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 25662
+
+[services.development]
+run = "pnpm --filter @workspace/jamie-aldridge run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/jamie-aldridge", "run", "build" ]
+serve = "static"
+publicDir = "artifacts/jamie-aldridge/dist/public"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "25662"
+BASE_PATH = "/"

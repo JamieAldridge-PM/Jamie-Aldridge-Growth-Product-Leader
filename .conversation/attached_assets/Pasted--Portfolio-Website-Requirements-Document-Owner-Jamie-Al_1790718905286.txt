@@ -1,0 +1,115 @@
+# Portfolio Website Requirements Document
+
+**Owner:** Jamie Aldridge, Growth Product Leader **Status:** Draft v1 **Target launch:** Three weeks from kickoff
+
+## 1. Overview
+
+This document defines the requirements for jamiealdridge.com, a personal portfolio and resume site. The site exists to convince hiring managers and recruiters for senior growth and monetization roles, within 60 seconds, that Jamie is a proven operator in subscription monetization. It should also function as a live demonstration of Jamie's craft: the site will be instrumented, measured, and optimized like a growth product.
+
+## 2. Problem Statement
+
+Resumes and LinkedIn profiles flatten a growth leader's impact into a few lines of text. They cannot show experiment design, decision making, or the depth of payments and pricing expertise that separates a monetization specialist from a generalist PM. Most PM portfolios in the market are generic, light on metrics, and offer no evidence of hands on building. Jamie needs a destination that proves expertise quickly and converts visitors into conversations.
+
+## 3. Goals and Success Metrics
+
+The primary goal is to generate qualified conversations with hiring managers for senior growth and monetization roles. The secondary goal is to establish a clear point of view on consumer subscription monetization.
+
+| Metric | Definition | Target (first 60 days) |
+| --- | --- | --- |
+| Primary conversion rate | Visitors who download the resume or book a call | 8% or higher |
+| Case study engagement | Visitors who open at least one case study | 40% or higher |
+| Case study read depth | Readers who scroll past 75% of a case study | 50% or higher |
+| Calendar bookings | Calls booked through the site | Tracked weekly |
+| Mobile bounce rate | Single page sessions on mobile | Below 50% |
+
+Guardrail: page load time must stay under two seconds on mobile regardless of any experiment.
+
+## 4. Target Audience
+
+The primary audience is hiring managers and product leaders at consumer subscription companies evaluating Jamie for a senior role. They arrive from a resume link, a LinkedIn profile, or a referral, and they are skimming between meetings. The secondary audience is recruiters, who need fast access to the resume, title level, and location. The tertiary audience is peers and founders who may find Jamie through writing or side projects.
+
+## 5. Positioning and Messaging
+
+The homepage headline will make a narrow, confident claim centered on converting free users into paying subscribers. The supporting line will name the specific domains of expertise: paywalls, pricing, subscription lifecycle, and payments across Stripe, Apple StoreKit, and Google Play. All copy across the site should reinforce this specialization rather than broaden it.
+
+## 6. Information Architecture
+
+The site will have four primary tabs, with contact access in a persistent footer on every page.
+
+| Tab | Purpose | Primary action |
+| --- | --- | --- |
+| Home | Establish positioning and proof in one screen | View case studies or download resume |
+| Case Studies | Demonstrate depth, judgment, and measurable impact | Read a full case study |
+| Lab | Show hands on building and AI fluency through side projects | Open a project link |
+| About and Resume | Humanize Jamie and provide the full resume | Download PDF or book a call |
+
+## 7. Page Requirements
+
+### 7.1 Home
+
+The Home page must include the positioning headline and supporting line above the fold on both desktop and mobile. Directly beneath, a proof bar will show three or four headline metrics from Jamie's career (for example, conversion lift, revenue impact, and experiment velocity). The page will preview the three featured case studies as cards, show company names or logos where permitted, and present two calls to action: view case studies and download resume.
+
+### 7.2 Case Studies
+
+The index page will display three featured case studies as cards, each with a title, a one sentence outcome, and a headline metric. Each case study page must follow a consistent template: context and problem, hypothesis, what was shipped, results with quantified impact, and reflections on what Jamie would do differently. Each page will include a short "at a glance" summary box at the top for skimmers, covering role, team size, timeline, and outcome. Recommended topics are a paywall or pricing experiment, a cross platform payments or subscription lifecycle initiative, and the story of leading the Growth Team at MyFitnessPal. Confidential figures may be expressed as relative percentages.
+
+### 7.3 Lab
+
+The Lab page will present side projects as cards, each containing the problem, what Jamie built, the tools used, and a link or screenshot. Initial candidates include Full Court, the LeagueApps AI toolkit, the Texas gardening product concept, and the app built in Replit. The page should open with one sentence framing why Jamie builds: to stay close to the craft and to AI tooling.
+
+### 7.4 About and Resume
+
+This page will include a short personal bio, a section on operating principles (how Jamie runs experiments and partners with engineering and design), a condensed web version of the resume, a PDF download, and a calendar booking link. Community leadership, such as serving as AGBL commissioner, may appear here as evidence of operating a real community. An optional Writing section can be added later once Jamie publishes posts.
+
+## 8. Functional Requirements
+
+| ID | Requirement | Priority |
+| --- | --- | --- |
+| FR1 | Persistent top navigation with the four tabs | P0 |
+| FR2 | Resume PDF download available from Home and About | P0 |
+| FR3 | Calendar booking link (Calendly or Cal.com) in footer and About | P0 |
+| FR4 | Contact email and LinkedIn link in footer on every page | P0 |
+| FR5 | Reusable case study template with an at a glance summary box | P0 |
+| FR6 | Case study cards on Home linking to full pages | P0 |
+| FR7 | Lab project cards with external links | P1 |
+| FR8 | Support for two headline variants in an A/B test | P1 |
+| FR9 | Open Graph images and descriptions for clean LinkedIn and Slack previews | P1 |
+| FR10 | Password protection option for any case study with sensitive detail | P2 |
+| FR11 | Writing or blog section | P2 |
+
+## 9. Analytics and Experimentation
+
+The site will use a privacy friendly analytics tool (such as Plausible, PostHog, or Google Analytics 4). The following events must be tracked from launch: resume download, calendar link click, calendar booking completed, case study opened, case study scroll depth at 25, 50, and 75 percent, Lab project link clicked, and LinkedIn link clicked. UTM parameters will be appended to every link Jamie shares (resume, LinkedIn, applications) so traffic can be attributed by channel and, where useful, by company. The first experiment will test two homepage headlines, one focused on outcomes and one focused on expertise, with the primary conversion rate as the success metric.
+
+## 10. Non Functional Requirements
+
+The site must be fully responsive and designed mobile first, since many hiring managers will open links on their phones. Pages must load in under two seconds on a typical mobile connection. The site must meet WCAG 2.1 AA accessibility standards, including sufficient color contrast, alt text for images, and keyboard navigation. Basic SEO is required so that a search for Jamie's name returns the site first: unique page titles, meta descriptions, a sitemap, and structured data for a Person. The site must be served over HTTPS on a custom domain.
+
+## 11. Design Direction
+
+The visual style should be clean, confident, and data forward, closer to a well designed product dashboard than a creative agency portfolio. Metrics should be visually prominent. Typography should prioritize readability for long case studies. A restrained palette with a single accent color will keep attention on content.
+
+## 12. Technical Approach
+
+The recommended platform is Framer or Webflow for speed, visual polish, and easy iteration without engineering support. A custom build (for example, a static site deployed from GitHub) remains an option if Jamie wants the site itself to serve as a Lab project. The domain jamiealdridge.com should be purchased at kickoff.
+
+## 13. Content Requirements
+
+Before build begins, Jamie will need to prepare the final homepage headline and supporting line, three to four verified proof metrics, three case study drafts following the template, Lab project summaries with screenshots or links, a bio of roughly 150 words, a professional headshot, and an updated resume PDF aligned with the site's positioning.
+
+## 14. Milestones
+
+| Week | Milestone |
+| --- | --- |
+| Week 1 | Finalize positioning, gather metrics, draft all three case studies, purchase domain |
+| Week 2 | Build site structure, Home, About and Resume, and case study template |
+| Week 3 | Populate case studies and Lab, implement analytics, QA on mobile, launch |
+| Post launch | Run headline test, review metrics weekly, add Writing section when ready |
+
+## 15. Out of Scope for v1
+
+Blog functionality, newsletter signup, multilingual support, a custom CMS, and video content are out of scope for the first release.
+
+## 16. Open Questions
+
+Which MyFitnessPal metrics can be shared publicly, and which should be shown as relative figures? Should case studies be tailored or reordered for specific target companies using UTM driven variations? Should the Lab include live demos or only links and screenshots? Will Jamie commit to a regular writing cadence that justifies a Writing section in v2?
