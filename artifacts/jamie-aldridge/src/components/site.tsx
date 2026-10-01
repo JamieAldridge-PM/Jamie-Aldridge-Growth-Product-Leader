@@ -127,7 +127,7 @@ export function HomePage() {
       <section className="hero"><div className="container hero-grid">
         <div className="page-enter"><div className="hero-kicker eyebrow">GROWTH PRODUCT LEADER / SUBSCRIPTION MONETIZATION</div>
           <h1 className="display">I turn free users into <em>paying subscribers.</em></h1>
-          <p className="hero-copy">Growth product leader specializing in paywalls, pricing, and subscription lifecycle — with hands-on payments expertise across Stripe, Apple StoreKit, and Google Play.</p>
+          <p className="hero-copy">Growth product leader specializing in paywalls, pricing, and subscription lifecycle, with hands-on payments expertise across Stripe, Apple StoreKit, and Google Play.</p>
           <div className="button-row"><Link href="/case-studies" className="btn btn-blue" data-testid="link-home-cases">View Case Studies <ArrowUpRight size={16} /></Link><a href={links.resume} className="btn btn-light" download data-testid="link-home-resume"><Download size={15} /> Download Resume</a></div>
           <div className="hero-note"><span className="status-dot" /> <strong>Currently exploring</strong> senior growth & monetization roles</div>
         </div>
