@@ -31,8 +31,8 @@ export function AboutPage() {
           ['01 / GROWTH', 'Growth Team Lead', 'MyFitnessPal', 'Led growth team responsible for subscription acquisition and retention.'],
           ['02 / MONETIZATION', 'Senior Growth PM', 'Subscription products', 'Led paywall, pricing, and cross-platform payments initiatives.'],
           ['03 / COMMUNITY', 'Commissioner', 'AGBL', 'Runs league operations for an active amateur sports league.'],
-          ['04 / EARLIER', 'Education / earlier career', 'Details to come', 'Additional background and dates to be added.'],
-        ].map(([num,role,company,description])=><div className="resume-row" key={num}><span className="mono">{num}</span><div><strong>{role}</strong><p><b style={{color:'#1761c5'}}>{company}</b> — {description}</p></div></div>)}
+          ['04 / EARLIER', 'Education / earlier career', '', ''],
+        ].map(([num,role,company,description])=><div className="resume-row" key={num}><span className="mono">{num}</span><div><strong>{role}</strong>{company && <p><b style={{color:'#1761c5'}}>{company}</b> — {description}</p>}</div></div>)}
       </div></div></section>
     <section className="community"><div className="container community-inner"><div className="community-badge">AGBL<small>COMMISSIONER</small></div><div><span className="eyebrow">BEYOND THE DAY JOB</span><h2>Real community. Real operational complexity.</h2><p>As commissioner of the AGBL, Jamie manages scheduling, rules, and disputes for an active amateur sports league. It's another kind of product leadership: listening to stakeholders, designing fair systems, and keeping something people care about running well.</p></div></div></section>
     <ClosingCTA />
