@@ -2,7 +2,7 @@ export const links = {
   email: 'mailto:hello@jamiealdridge.com',
   linkedin: 'https://linkedin.com/in/jamiealdridge',
   calendar: 'https://cal.com/jamiealdridge',
-  resume: '/resume.pdf',
+  resume: `${import.meta.env.BASE_URL}Jamie-Aldridge-Resume.pdf`,
 };
 
 export type CaseStudy = {
